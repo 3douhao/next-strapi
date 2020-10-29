@@ -1,0 +1,33 @@
+.header {
+  /* width: 400px; */
+  background: lightgrey;
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.img {
+  width: 50px;
+}
+.span {
+  margin-left: 30px;
+  font-size: 2rem;
+}
+.ul {
+  display: flex;
+  list-style: none;
+  color: hotpink;
+}
+.li {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+.active {
+  color: green;
+}
