@@ -18,9 +18,15 @@
 }
 .cardContent {
   width: 300px;
+  display: grid;
 }
 .typography {
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 50px;
+}
+.cardAction {
+  align-self: end;
+}
+.movieTitle {
+  align-self: stretch;
 }
