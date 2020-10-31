@@ -14,19 +14,15 @@
 .card {
   display: grid;
   width: 300px;
-  justify-items: right;
+  justify-items: end;
 }
 .cardContent {
   width: 300px;
   display: grid;
 }
-.typography {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .cardAction {
   align-self: end;
 }
 .movieTitle {
-  align-self: stretch;
+  align-self: start;
 }

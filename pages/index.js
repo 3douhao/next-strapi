@@ -16,15 +16,19 @@ import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import Button from '@material-ui/core/Button'
+import Link from 'next/link'
 
-export default function Home ({ movies }) {
+export default function Home({ movies }) {
   const { BASE_URL } = process.env
   return (
     <div className={container}>
       {movies.map(movie => {
         return (
           <Card key={movie.id} className={card}>
-            <CardMedia className={image} image={BASE_URL + movie.poster.url} />
+            <CardMedia
+              className={image}
+              image={BASE_URL + movie.poster.url}
+            />
 
             <CardContent className={cardContent}>
               <Typography
@@ -36,13 +40,22 @@ export default function Home ({ movies }) {
                 {movie.title}
               </Typography>
 
-              <Typography gutterBottom className={typography} component='p'>
+              <Typography
+                gutterBottom
+                className={typography}
+                component='p'
+              >
                 {movie.description}
               </Typography>
             </CardContent>
             <CardActions className={cardAction}>
               <Button className={button} color='secondary'>
-                More Details
+                <Link
+                  href='/movies/[genre]/[slug]'
+                  as={`/movies/${movie.genre.slug}/${movie.slug}`}
+                >
+                  <a>More Details</a>
+                </Link>
               </Button>
             </CardActions>
           </Card>
@@ -51,7 +64,7 @@ export default function Home ({ movies }) {
     </div>
   )
 }
-export async function getServerSideProps () {
+export async function getServerSideProps() {
   const { BASE_URL } = process.env
   const moviesQueryPath = `${BASE_URL}/movies`
   const { data } = await axios.get(moviesQueryPath)

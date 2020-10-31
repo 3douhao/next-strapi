@@ -1,0 +1,17 @@
+/* .box { */
+/*   background: CadetBlue; */
+/*   color: white; */
+/*   width: 500px; */
+/*   height: 600px; */
+/*   margin: auto; */
+/*   padding: 20px; */
+/* } */
+.cardMedia {
+  height: 600px;
+  width: 400px;
+}
+.card {
+  width: 400px;
+  margin: auto;
+  display: flex;
+}
