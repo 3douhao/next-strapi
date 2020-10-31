@@ -1,4 +1,7 @@
 require('dotenv').config()
+const withImages = require('next-images')
+// withImages()
+const svgImport = withImages()
 
 module.exports = {
   env: {
@@ -6,5 +9,6 @@ module.exports = {
   },
   publicRuntimeConfig: {
     BASE_URL: process.env.BASE_URL
-  }
+  },
+  svgImport
 }

@@ -7,6 +7,8 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../theme'
+import SEO from '../next-seo.config'
+import { DefaultSeo } from 'next-seo'
 // function MyApp ({ Component, pageProps, navigations }) {
 //   return (
 //     <Fragment>
@@ -28,6 +30,7 @@ export default function MyApp (props) {
 
   return (
     <React.Fragment>
+      <DefaultSeo {...SEO} />
       <ThemeProvider theme={theme}>
         <Header navigations={navigations} />
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
